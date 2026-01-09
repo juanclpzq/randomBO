@@ -1,0 +1,852 @@
+{
+  "companies": [
+    {
+      "id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "name": "TMH Foods",
+      "legal_name": "TMH Foods S.A. de C.V.",
+      "tax_id": "TMH010101ABC",
+      "email": "info@tmhfoods.com",
+      "phone": "+52-55-0000-0000",
+      "address": "CDMX, México",
+      "language": "es",
+      "membership_plan_id": 1,
+      "subscription_start": "2024-01-01",
+      "subscription_end": "2026-12-31",
+      "subscription_status": 1,
+      "status": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "locations": [
+    {
+      "id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "name": "Satélite",
+      "code": "SAT",
+      "phone": "+52-55-1111-1111",
+      "email": "satelite@tmhfoods.com",
+      "address": "Satélite, Edo. Méx.",
+      "timezone": "America/Mexico_City",
+      "location_type": "store",
+      "status": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    },
+    {
+      "id": "b2d3a7a0-0a7d-4c8e-9e3f-8b0f37cf2f03",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "name": "CEDIS Norte",
+      "code": "CEDIS-N",
+      "phone": "+52-55-2222-2222",
+      "email": "cedisn@tmhfoods.com",
+      "address": "Naucalpan, Edo. Méx.",
+      "timezone": "America/Mexico_City",
+      "location_type": "warehouse",
+      "status": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "public_id": "f3d2d7b0-8a0f-4c6a-8a12-9a0ed9a0a001",
+      "name": "Admin System",
+      "email": "admin@tmhfoods.com",
+      "username": "admin",
+      "is_active": true,
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "email_verified_at": "2024-01-01T10:00:00Z",
+      "password": "$2y$10$examplehash",
+      "remember_token": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "employees": [
+    {
+      "id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "first_name": "Luis",
+      "last_name": "Perez",
+      "email": "it@tmhus.com",
+      "phone": "+52-55-3333-3333",
+      "password_hash": "$2y$10$examplehash",
+      "status": 1,
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": "543654b9-8660-45ae-9b28-1202cb560050",
+      "name": "Administrador",
+      "description": "Acceso total",
+      "slug": "admin",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "is_system_role": true,
+      "is_active": true,
+      "created_by": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "4a3c68eb-ddc8-4ed9-b4bc-61e8eb53bde6",
+      "name": "view_inventory",
+      "description": "Puede ver inventario",
+      "resource": "inventory",
+      "action": "view",
+      "scope": "own_location",
+      "is_system_permission": true,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z"
+    }
+  ],
+  "role_permissions": [
+    {
+      "id": "d4eea44e-9a38-410b-b6aa-031afd9c4e0b",
+      "role_id": "543654b9-8660-45ae-9b28-1202cb560050",
+      "permission_id": "4a3c68eb-ddc8-4ed9-b4bc-61e8eb53bde6",
+      "created_at": "2024-01-01T10:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "user_roles": [
+    {
+      "id": "3350cf1a-ed66-4520-91a7-1f28dc4bd714",
+      "employee_id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "role_id": "543654b9-8660-45ae-9b28-1202cb560050",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z"
+    }
+  ],
+  "temporary_permissions": [
+    {
+      "id": "a222b333-3333-4444-5555-666677778888",
+      "employee_id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "permission_id": "4a3c68eb-ddc8-4ed9-b4bc-61e8eb53bde6",
+      "granted_by": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "reason": "Demo temporal",
+      "expires_at": "2026-12-31T23:59:59Z",
+      "is_used": false,
+      "used_at": null,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z"
+    }
+  ],
+  "units": [
+    {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "name": "Gramo",
+      "short_name": "g",
+      "status": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    },
+    {
+      "id": "22222222-2222-2222-2222-222222222222",
+      "name": "Pieza",
+      "short_name": "pz",
+      "status": 1,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "unit_conversions": [
+    {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "from_unit_id": "22222222-2222-2222-2222-222222222222",
+      "to_unit_id": "11111111-1111-1111-1111-111111111111",
+      "factor": 100.0
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "3b1a9a74-1f4f-4df2-95c1-2b27d7e16b90",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "name": "Proveedor Central",
+      "email": "ventas@proveedor.com",
+      "phone": "+52-55-4444-4444",
+      "address": "CDMX",
+      "notes": "Proveedor principal",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "inventory_items": [
+    {
+      "id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": null,
+      "name": "Tomate",
+      "code": "INV-TOM",
+      "qty_per_purchase_unit": 1000.0,
+      "minimum_limit": 1000.0,
+      "notes": "Ingrediente base",
+      "status": 1,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "purchase_unit_id": "11111111-1111-1111-1111-111111111111",
+      "recipe_unit_id": "11111111-1111-1111-1111-111111111111",
+      "item_kind": "raw_material",
+      "stock_policy": "stocked",
+      "producible_recipe_id": null,
+      "stock_unit_id": "11111111-1111-1111-1111-111111111111",
+      "is_lot_tracked": true
+    }
+  ],
+  "recipes": [
+    {
+      "id": "9b26d6c9-55bb-4b18-b0d9-0e1c4c2f2a01",
+      "name": "Salsa Base",
+      "description": "Salsa roja básica",
+      "is_base": true,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "output_inventory_item_id": null,
+      "output_quantity": 0,
+      "output_unit_id": "11111111-1111-1111-1111-111111111111",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393"
+    }
+  ],
+  "recipe_ingredients": [
+    {
+      "id": "c2c2c2c2-1111-2222-3333-444444444444",
+      "recipe_id": "9b26d6c9-55bb-4b18-b0d9-0e1c4c2f2a01",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "quantity": 200.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": "0f3adf90-2a1d-4c35-bd0b-4d8e2b6a9c01",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "first_name": "Juan",
+      "last_name": "Cliente",
+      "email": "juan@correo.com",
+      "phone": "+52-55-5555-5555",
+      "tax_id": null,
+      "business_name": null,
+      "address": "Satélite",
+      "city": "Naucalpan",
+      "state": "Edo. Méx.",
+      "postal_code": "53100",
+      "country": "Mexico",
+      "customer_type": "individual",
+      "notes": null,
+      "loyalty_points": 10,
+      "total_orders": 1,
+      "total_spent": 150.0,
+      "status": 1,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "inventory_item_suppliers": [
+    {
+      "id": "d7d7d7d7-1111-2222-3333-444444444444",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "supplier_id": "3b1a9a74-1f4f-4df2-95c1-2b27d7e16b90",
+      "cost": 35.5,
+      "last_purchase_date": "2026-01-01",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-01T10:00:00Z"
+    }
+  ],
+  "purchase_orders": [
+    {
+      "id": "e1a1a1a1-1111-2222-3333-444444444444",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "b2d3a7a0-0a7d-4c8e-9e3f-8b0f37cf2f03",
+      "supplier_id": "3b1a9a74-1f4f-4df2-95c1-2b27d7e16b90",
+      "status": "pending",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-01T10:00:00Z",
+      "updated_at": "2026-01-01T10:00:00Z"
+    }
+  ],
+  "purchase_order_items": [
+    {
+      "id": "f2b2b2b2-1111-2222-3333-444444444444",
+      "purchase_order_id": "e1a1a1a1-1111-2222-3333-444444444444",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "quantity": 5000.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111",
+      "cost": 177.5,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-01T10:00:00Z"
+    }
+  ],
+  "inventory_stocks": [
+    {
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "on_hand": 3000.0,
+      "reserved": 0.0,
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "inventory_item_costs": [
+    {
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "avg_unit_cost": 0.0355,
+      "last_unit_cost": 0.0355,
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "inventory_lots": [
+    {
+      "id": "4c4c4c4c-1111-2222-3333-444444444444",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "lot_code": "LOT-TOM-20260101",
+      "received_date": "2026-01-01",
+      "expiry_date": "2026-01-15",
+      "unit_cost": 0.0355,
+      "supplier_id": "3b1a9a74-1f4f-4df2-95c1-2b27d7e16b90",
+      "source_type": "purchase_order",
+      "source_id": "e1a1a1a1-1111-2222-3333-444444444444",
+      "notes": "Lote inicial",
+      "created_at": "2026-01-01T10:00:00Z",
+      "updated_at": "2026-01-01T10:00:00Z"
+    }
+  ],
+  "inventory_lot_stocks": [
+    {
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "lot_id": "4c4c4c4c-1111-2222-3333-444444444444",
+      "on_hand": 3000.0,
+      "reserved": 0.0,
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "inventory_movements": [
+    {
+      "id": "5d5d5d5d-1111-2222-3333-444444444444",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "quantity": 3000.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111",
+      "reference_id": "e1a1a1a1-1111-2222-3333-444444444444",
+      "reference_type": "purchase_order",
+      "occurred_at": "2026-01-01T12:00:00Z",
+      "unit_cost": 0.0355,
+      "idempotency_key": "PO-e1a1a1a1-receive-1",
+      "actor_employee_id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "actor_user_id": null,
+      "notes": "Recepción de compra",
+      "movement_type": "purchase_in",
+      "created_at": "2026-01-01T12:00:00Z",
+      "updated_at": "2026-01-01T12:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "inventory_movement_lots": [
+    {
+      "id": "6e6e6e6e-1111-2222-3333-444444444444",
+      "movement_id": "5d5d5d5d-1111-2222-3333-444444444444",
+      "lot_id": "4c4c4c4c-1111-2222-3333-444444444444",
+      "quantity": 3000.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111",
+      "created_at": "2026-01-01T12:00:00Z"
+    }
+  ],
+  "inventory_transfers": [
+    {
+      "id": "7f7f7f7f-1111-2222-3333-444444444444",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "from_location_id": "b2d3a7a0-0a7d-4c8e-9e3f-8b0f37cf2f03",
+      "to_location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "status": "received",
+      "notes": "Transferencia inicial",
+      "shipped_at": "2026-01-01T13:00:00Z",
+      "received_at": "2026-01-01T15:00:00Z",
+      "shipped_by_employee_id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "received_by_employee_id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "ship_idempotency_key": "TR-7f7f-ship-1",
+      "receive_idempotency_key": "TR-7f7f-recv-1",
+      "created_at": "2026-01-01T13:00:00Z",
+      "updated_at": "2026-01-01T15:00:00Z"
+    }
+  ],
+  "inventory_transfer_items": [
+    {
+      "id": "80808080-1111-2222-3333-444444444444",
+      "transfer_id": "7f7f7f7f-1111-2222-3333-444444444444",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "quantity": 1000.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111"
+    }
+  ],
+  "production_batches": [
+    {
+      "id": "91919191-1111-2222-3333-444444444444",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "recipe_id": "9b26d6c9-55bb-4b18-b0d9-0e1c4c2f2a01",
+      "produced_quantity": 10.0,
+      "produced_unit_id": "22222222-2222-2222-2222-222222222222",
+      "notes": "Producción demo",
+      "created_at": "2026-01-02T07:30:00Z"
+    }
+  ],
+  "inventory_reservations": [
+    {
+      "id": "a1a1a1a1-1111-2222-3333-444444444444",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "status": "active",
+      "reference_type": "order",
+      "reference_id": "b1b1b1b1-1111-2222-3333-444444444444",
+      "notes": "Reserva para orden demo",
+      "created_at": "2026-01-02T08:05:00Z",
+      "updated_at": "2026-01-02T08:05:00Z"
+    }
+  ],
+  "inventory_reservation_items": [
+    {
+      "id": "a2a2a2a2-1111-2222-3333-444444444444",
+      "reservation_id": "a1a1a1a1-1111-2222-3333-444444444444",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "quantity": 200.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111",
+      "created_at": "2026-01-02T08:05:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "b3b3b3b3-1111-2222-3333-444444444444",
+      "name": "Comida",
+      "description": "Categoría general",
+      "status": 1,
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "modifier_groups": [
+    {
+      "id": "c3c3c3c3-1111-2222-3333-444444444444",
+      "name": "Tamaño",
+      "description": "Selecciona tamaño",
+      "multiple_select": false,
+      "required": true,
+      "sort_order": 1,
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "status": 1
+    }
+  ],
+  "modifiers": [
+    {
+      "id": "d3d3d3d3-1111-2222-3333-444444444444",
+      "modifier_group_id": "c3c3c3c3-1111-2222-3333-444444444444",
+      "name": "Grande",
+      "description": "Porción grande",
+      "price_change": 20.0,
+      "sort_order": 1,
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "status": 1
+    }
+  ],
+  "modifier_ingredients": [
+    {
+      "id": "e3e3e3e3-1111-2222-3333-444444444444",
+      "modifier_id": "d3d3d3d3-1111-2222-3333-444444444444",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "quantity_change": 50.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "f3f3f3f3-1111-2222-3333-444444444444",
+      "name": "Sin Tomate",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "status": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "01010101-1111-2222-3333-444444444444",
+      "name": "Taco",
+      "description": "Taco demo",
+      "sku": "TACO-001",
+      "price": 50.0,
+      "status": 1,
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "category_id": "b3b3b3b3-1111-2222-3333-444444444444",
+      "recipe_id": "9b26d6c9-55bb-4b18-b0d9-0e1c4c2f2a01",
+      "code": "ITEM-TACO",
+      "imagen": "https://example.com/taco.png",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "items_exceptions": [
+    {
+      "id": "02020202-1111-2222-3333-444444444444",
+      "item_id": "01010101-1111-2222-3333-444444444444",
+      "exception_id": "f3f3f3f3-1111-2222-3333-444444444444",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "exception_ingredients": [
+    {
+      "id": "03030303-1111-2222-3333-444444444444",
+      "exception_id": "f3f3f3f3-1111-2222-3333-444444444444",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "quantity": 200.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "extras": [
+    {
+      "id": "04040404-1111-2222-3333-444444444444",
+      "name": "Queso extra",
+      "price": 15.0,
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "status": 1
+    }
+  ],
+  "extra_ingredients": [
+    {
+      "id": "05050505-1111-2222-3333-444444444444",
+      "extra_id": "04040404-1111-2222-3333-444444444444",
+      "inventory_item_id": "8e1b3a2d-3d8f-4d3c-8c32-bc9b0d2d9a10",
+      "quantity": 20.0,
+      "unit_id": "11111111-1111-1111-1111-111111111111",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "items_extras": [
+    {
+      "id": "06060606-1111-2222-3333-444444444444",
+      "item_id": "01010101-1111-2222-3333-444444444444",
+      "extra_id": "04040404-1111-2222-3333-444444444444",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "items_modifier_groups": [
+    {
+      "id": "07070707-1111-2222-3333-444444444444",
+      "item_id": "01010101-1111-2222-3333-444444444444",
+      "modifier_group_id": "c3c3c3c3-1111-2222-3333-444444444444",
+      "required": true,
+      "sort_order": 1,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "items_modifiers": [
+    {
+      "id": "08080808-1111-2222-3333-444444444444",
+      "item_id": "01010101-1111-2222-3333-444444444444",
+      "modifier_id": "d3d3d3d3-1111-2222-3333-444444444444",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z"
+    }
+  ],
+  "devices": [
+    {
+      "id": "d1c1e1f1-1111-2222-3333-444455556666",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "name": "Caja Satélite 1",
+      "type": "register",
+      "serial_number": "REG-001-2026",
+      "model": "POSBox X1",
+      "status": "active",
+      "last_seen_at": "2026-01-02T08:00:00Z",
+      "notes": "Caja principal de la sucursal Satélite",
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "shifts": [
+    {
+      "id": "s1c1e1f1-1111-2222-3333-444455556666",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "register_id": "d1c1e1f1-1111-2222-3333-444455556666",
+      "opened_by": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "opened_at": "2026-01-02T08:00:00Z",
+      "opening_cash": 1000.0,
+      "status": "open",
+      "closed_by": null,
+      "closed_at": null,
+      "notes": "Apertura de turno matutino",
+      "created_at": "2026-01-02T08:00:00Z",
+      "updated_at": "2026-01-02T08:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "shift_closures": [
+    {
+      "id": "c1c1e1f1-1111-2222-3333-444455556666",
+      "shift_id": "s1c1e1f1-1111-2222-3333-444455556666",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "register_id": "d1c1e1f1-1111-2222-3333-444455556666",
+      "expected_cash": 1500.0,
+      "counted_cash": 1490.0,
+      "cash_difference": -10.0,
+      "total_sales": 500.0,
+      "total_refunds": 0.0,
+      "total_cash_sales": 400.0,
+      "total_card_sales": 100.0,
+      "total_other_sales": 0.0,
+      "open_sales_amount": 0.0,
+      "closed_by": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "closed_at": "2026-01-02T16:00:00Z",
+      "created_at": "2026-01-02T16:00:00Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "orders": [
+    {
+      "id": "b1b1b1b1-1111-2222-3333-444444444444",
+      "device_id": "d1c1e1f1-1111-2222-3333-444455556666",
+      "table_number": "12",
+      "status": "closed",
+      "total": 85.0,
+      "subtotal": 70.0,
+      "tax": 0.0,
+      "discount": 0.0,
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "employee_id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "customer_id": "0f3adf90-2a1d-4c35-bd0b-4d8e2b6a9c01",
+      "discount_type": null,
+      "discount_value": null,
+      "discount_amount": null,
+      "discount_label": null,
+      "public_id": "ORD-000001",
+      "order_number": 1,
+      "note": "Orden demo",
+      "order_type": "dine_in",
+      "guests": 2,
+      "customer_name": "Juan Cliente",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:10:00Z",
+      "updated_at": "2026-01-02T08:20:00Z"
+    }
+  ],
+  "order_items": [
+    {
+      "id": "9c7103e5-8848-44fc-8420-fbae7f3efa3e",
+      "quantity": 1,
+      "price": 50.0,
+      "total": 85.0,
+      "notes": "Con extra y modificador",
+      "order_id": "b1b1b1b1-1111-2222-3333-444444444444",
+      "item_id": "01010101-1111-2222-3333-444444444444",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:10:30Z",
+      "updated_at": "2026-01-02T08:10:30Z"
+    }
+  ],
+  "order_item_modifiers": [
+    {
+      "id": "11110000-1111-2222-3333-444444444444",
+      "order_item_id": "9c7103e5-8848-44fc-8420-fbae7f3efa3e",
+      "modifier_id": "d3d3d3d3-1111-2222-3333-444444444444",
+      "modifier_name": "Grande",
+      "price_change": 20.0,
+      "quantity": 1,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:10:40Z",
+      "updated_at": "2026-01-02T08:10:40Z"
+    }
+  ],
+  "order_item_extras": [
+    {
+      "id": "22220000-1111-2222-3333-444444444444",
+      "order_item_id": "9c7103e5-8848-44fc-8420-fbae7f3efa3e",
+      "extra_id": "04040404-1111-2222-3333-444444444444",
+      "extra_name": "Queso extra",
+      "price": 15.0,
+      "quantity": 1,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:10:45Z",
+      "updated_at": "2026-01-02T08:10:45Z"
+    }
+  ],
+  "order_item_exceptions": [
+    {
+      "id": "33330000-1111-2222-3333-444444444444",
+      "order_item_id": "9c7103e5-8848-44fc-8420-fbae7f3efa3e",
+      "exception_id": "f3f3f3f3-1111-2222-3333-444444444444",
+      "exception_name": "Sin Tomate",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:10:50Z",
+      "updated_at": "2026-01-02T08:10:50Z"
+    }
+  ],
+  "sales": [
+    {
+      "id": "44440000-1111-2222-3333-444444444444",
+      "total": 85.0,
+      "subtotal": 70.0,
+      "tax": 0.0,
+      "discount": 0.0,
+      "status": 1,
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "location_id": "63d7af7d-447d-49e1-bcb1-8dd4d88118a0",
+      "employee_id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:21:00Z",
+      "updated_at": "2026-01-02T08:21:00Z",
+      "note": "Venta demo",
+      "refunded": false,
+      "idempotency_key": "SALE-4444-1"
+    }
+  ],
+  "payments": [
+    {
+      "id": "b6848668-7cd1-417a-957a-d732dd8b862f",
+      "method": "card",
+      "amount": 85.0,
+      "reference": "AUTH-123456",
+      "sale_id": "44440000-1111-2222-3333-444444444444",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:22:00Z",
+      "updated_at": "2026-01-02T08:22:00Z",
+      "amount_received": 85.0,
+      "transaction_number": "TX-0001"
+    }
+  ],
+  "sale_orders": [
+    {
+      "sale_id": "44440000-1111-2222-3333-444444444444",
+      "order_id": "b1b1b1b1-1111-2222-3333-444444444444",
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:22:10Z"
+    }
+  ],
+  "payments_order_items": [
+    {
+      "id": "55550000-1111-2222-3333-444444444444",
+      "payment_id": "b6848668-7cd1-417a-957a-d732dd8b862f",
+      "order_item_id": "9c7103e5-8848-44fc-8420-fbae7f3efa3e",
+      "amount": 85.0,
+      "created_at": "2026-01-02T08:22:20Z",
+      "updated_at": "2026-01-02T08:22:20Z",
+      "deleted_at": null,
+      "deleted_by": null
+    }
+  ],
+  "logs": [
+    {
+      "id": "66660000-1111-2222-3333-444444444444",
+      "action": "create",
+      "entity": "order",
+      "entity_id": "b1b1b1b1-1111-2222-3333-444444444444",
+      "description": "Creación de orden demo",
+      "company_id": "9171901a-2999-4222-8b62-f8c10c492393",
+      "employee_id": "60385f77-8eee-4bb6-96dc-9d3472a2c98d",
+      "user_id": 1,
+      "deleted_at": null,
+      "deleted_by": null,
+      "created_at": "2026-01-02T08:10:00Z"
+    }
+  ]
+}
