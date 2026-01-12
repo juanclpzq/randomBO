@@ -42,6 +42,16 @@ class OrderItem extends Model
 	protected $primaryKey = 'id';
 	protected $keyType = 'string';
 
+	protected static function boot()
+	{
+		parent::boot();
+		static::creating(function ($model) {
+			if (empty($model->{$model->getKeyName()})) {
+				$model->{$model->getKeyName()} = (string) \Illuminate\Support\Str::uuid();
+			}
+		});
+	}
+
 	protected $casts = [
 		'id' => 'string',
 		'quantity' => 'int',
@@ -74,19 +84,19 @@ class OrderItem extends Model
 
 	public function modifiers()
 	{
-		return $this->belongsToMany(Modifier::class, 'order_item_modifiers')
+		return $this->belongsToMany(Modifier::class, 'order_item_modifiers', 'order_item_id', 'modifier_id')
 					->withPivot('id', 'modifier_name', 'price_change', 'deleted_at', 'deleted_by');
 	}
 
 	public function extras()
 	{
-		return $this->belongsToMany(Extra::class, 'order_item_extras')
+		return $this->belongsToMany(Extra::class, 'order_item_extras', 'order_item_id', 'extra_id')
 					->withPivot('id', 'extra_name', 'price', 'deleted_at', 'deleted_by');
 	}
 
 	public function exceptions()
 	{
-		return $this->belongsToMany(Exception::class, 'order_item_exceptions')
+		return $this->belongsToMany(Exception::class, 'order_item_exceptions', 'order_item_id', 'exception_id')
 					->withPivot('id', 'exception_name', 'deleted_at', 'deleted_by');
 	}
 }

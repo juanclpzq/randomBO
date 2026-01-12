@@ -8,6 +8,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -35,7 +36,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class ModifierGroup extends Model
 {
-	use SoftDeletes;
+	use HasFactory, SoftDeletes;
 	protected $table = 'modifier_groups';
 	public $incrementing = false;
 	protected $primaryKey = 'id';
@@ -76,6 +77,9 @@ class ModifierGroup extends Model
 	{
 		return $this->belongsToMany(Item::class, 'items_modifier_groups')
 					->withPivot('id', 'required', 'sort_order', 'deleted_at', 'deleted_by')
+					->wherePivotNull('deleted_at')
+					->whereNull('items.deleted_at')
+					->withoutGlobalScope(\Illuminate\Database\Eloquent\SoftDeletingScope::class)
 					->withTimestamps();
 	}
 }

@@ -55,3 +55,17 @@ Route::prefix('backoffice/v1')->middleware(['bypass.token', 'auth.sanctum'])->gr
     Route::apiResource('locations', App\Http\Controllers\Backoffice\LocationController::class);
     // Otros endpoints de inventario (movimientos, traspasos, etc.) se agregarán aquí
 });
+
+// KDS API v1
+Route::prefix('kds/v1')
+    ->middleware(['bypass.token', 'auth.sanctum', 'location'])
+    ->group(function () {
+        // Order retrieval
+        Route::get('orders', [App\Http\Controllers\Api\Kds\V1\OrderController::class, 'index']);
+        Route::get('orders/{orderId}', [App\Http\Controllers\Api\Kds\V1\OrderController::class, 'show']);
+
+        // Order actions
+        Route::post('orders/{orderId}/start', [App\Http\Controllers\Api\Kds\V1\OrderActionController::class, 'start']);
+        Route::post('orders/{orderId}/ready', [App\Http\Controllers\Api\Kds\V1\OrderActionController::class, 'ready']);
+        Route::post('orders/{orderId}/cancel', [App\Http\Controllers\Api\Kds\V1\OrderActionController::class, 'cancel']);
+    });

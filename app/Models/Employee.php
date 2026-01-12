@@ -8,6 +8,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -40,7 +41,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Employee extends Model
 {
-	use HasApiTokens, SoftDeletes;
+	use HasApiTokens, HasFactory, SoftDeletes;
 	protected $table = 'employees';
 	public $incrementing = false;
 	protected $primaryKey = 'id';

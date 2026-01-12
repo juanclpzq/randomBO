@@ -71,6 +71,8 @@ class Exception extends Model
 		return $this->belongsToMany(Item::class, 'items_exceptions')
 					->withPivot('id', 'deleted_at', 'deleted_by')
 					->wherePivotNull('deleted_at')
+					->whereNull('items.deleted_at')
+					->withoutGlobalScope(\Illuminate\Database\Eloquent\SoftDeletingScope::class)
 					->withTimestamps();
 	}
 

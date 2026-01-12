@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
@@ -9,7 +10,7 @@ use Illuminate\Support\Str;
 
 class Item extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $keyType = 'string';
     public $incrementing = false;
@@ -64,25 +65,33 @@ class Item extends Model
     public function modifierGroups()
     {
         return $this->belongsToMany(ModifierGroup::class, 'items_modifier_groups')
-            ->wherePivotNull('deleted_at');
+            ->wherePivotNull('deleted_at')
+            ->whereNull('modifier_groups.deleted_at')
+            ->withoutGlobalScope(\Illuminate\Database\Eloquent\SoftDeletingScope::class);
     }
 
     public function modifiers()
     {
         return $this->belongsToMany(Modifier::class, 'items_modifiers')
-            ->wherePivotNull('deleted_at');
+            ->wherePivotNull('deleted_at')
+            ->whereNull('modifiers.deleted_at')
+            ->withoutGlobalScope(\Illuminate\Database\Eloquent\SoftDeletingScope::class);
     }
 
     public function exceptions()
     {
         return $this->belongsToMany(Exception::class, 'items_exceptions')
-            ->wherePivotNull('deleted_at');
+            ->wherePivotNull('deleted_at')
+            ->whereNull('exceptions.deleted_at')
+            ->withoutGlobalScope(\Illuminate\Database\Eloquent\SoftDeletingScope::class);
     }
 
     public function extras()
     {
         return $this->belongsToMany(Extra::class, 'items_extras')
-            ->wherePivotNull('deleted_at');
+            ->wherePivotNull('deleted_at')
+            ->whereNull('extras.deleted_at')
+            ->withoutGlobalScope(\Illuminate\Database\Eloquent\SoftDeletingScope::class);
     }
 
     protected $casts = [
